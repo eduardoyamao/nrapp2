@@ -1,16 +1,9 @@
 import React from 'react';
 import {View, Image, Button} from 'react-native';
-import ImagePicker from 'react-native-image-picker';
+//import ImagePicker from 'react-native-image-picker';
 import Textarea from './Textarea';
 
 const CommentSection = ({comment = {}, onChangeText, onChangeImage}) => {
-  const handleChoosePhoto = () => {
-    ImagePicker.launchImageLibrary({noData: true}, response => {
-      if (respoonse && response.uri) {
-        onChangeImage(response);
-      }
-    });
-  };
 
   return (
     <View style={{padding: 10}}>
